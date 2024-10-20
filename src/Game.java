@@ -17,7 +17,6 @@ public class Game {
 
         game.playerSetUp();// neste metodo eu chamei a classe main game para rodar a subclasse playerSetUp
         game.townGate();
-        game.crossRoad();
 
 
     }
@@ -65,78 +64,8 @@ public class Game {
             townGate();
         }
         if(choice==3){
-            crossRoad();
+            System.out.println();
         }
-        else {
-            townGate();
-        }
-    }
-
-    public void crossRoad(){
-        System.out.println("------------------------------------------------------------------------ ");
-        System.out.println("You are at crossroad. If you go south, you will back to the town\n\n");
-        System.out.println("1: Go north");
-        System.out.println("2: Go east");
-        System.out.println("3: Go south");
-        System.out.println("4: Go west");
-        System.out.println("------------------------------------------------------------------------ ");
-        choice=myScanner.nextInt();
-        if(choice==1){
-            north();
-        }
-        if(choice==2){
-            east();
-        }
-        if(choice==3){
-            townGate();
-        }
-        if(choice==4){
-            west();
-        }
-        else {
-            crossRoad();
-        }
-    }
-
-
-
-    public void north(){
-        System.out.println("------------------------------------------------------------------------ ");
-        System.out.println("There is a river. You drink the water and rest at the riverside.");
-        System.out.println("Your HP is recovered.");
-        playerHp=playerHp+1;
-        System.out.println("Your HP: "+playerHp);
-        System.out.println("\n\n1: Go back to the crossroad.");
-        System.out.println("------------------------------------------------------------------------ ");
-        choice=myScanner.nextInt();
-        if(choice==1){
-            crossRoad();
-        }
-        else{
-            north();
-        }
-
-    }
-    public void east(){
-        System.out.println("------------------------------------------------------------------------ ");
-        System.out.println("You walked into a forest and found a Long Sword!");
-        playerWeapon="Long Sword";
-        System.out.println("Your weapon: "+playerWeapon);
-        System.out.println("\n\n1: Go back to the crossroad.");
-        System.out.println("------------------------------------------------------------------------ ");
-        choice=myScanner.nextInt();
-        if(choice==1){
-            crossRoad();
-        }
-        else{
-            north();
-        }
-
-    }
-
-    public void west(){
-        System.out.println("------------------------------------------------------------------------ ");
-        System.out.println("------------------------------------------------------------------------ ");
 
     }
 }
