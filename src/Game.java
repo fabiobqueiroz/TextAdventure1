@@ -16,6 +16,7 @@ public class Game {
 
         game.playerSetUp();// neste metodo eu chamei a classe main game para rodar a subclasse playerSetUp
         game.townGate();
+        game.crossRoad();
 
 
     }
