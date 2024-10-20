@@ -1,4 +1,3 @@
-
 import java.util.Scanner;
 
 public class Game {
@@ -64,8 +63,45 @@ public class Game {
             townGate();
         }
         if(choice==3){
-            System.out.println();
+            crossRoad();
         }
+        else {
+            townGate();
+        }
+    }
+    public void  crossRoad(){
+        System.out.println("------------------------------------------------------------------------ ");
+        System.out.println("You are at the crossroad.\nIf you go to south, you will go back to the town.\n");
+        System.out.println("1:Go north");
+        System.out.println("2:Go east");
+        System.out.println("3:Go south");
+        System.out.println("4: Go west");
+        System.out.println("------------------------------------------------------------------------ ");
+        choice=myScanner.nextInt();
+        if(choice==1){
+            north();
+        }
+        if(choice==2){
+            east();
+        }
+        if(choice==3){
+            south();
+        }
+        if(choice==4){
+            west();
+        }
+    }
+
+    public void north(){
+
+    }
+    public void east(){
+
+    }
+    public void south(){
+
+    }
+    public void west(){
 
     }
 }
