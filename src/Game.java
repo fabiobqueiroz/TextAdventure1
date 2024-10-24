@@ -13,13 +13,15 @@ public class Game {
     int choice;
     int silverRing;
 
+
+
     public static void main(String[] args) {
         Game game;//mudei o nome da classe para ficar mais facil de usar.
         game = new Game();// game em minusculo e o novo nome da classe Game, fica mais facil para nomear e posso fazer isso para qualquer palavra
 
         game.playerSetUp();// neste metodo eu chamei a classe main game para rodar a subclasse playerSetUp
-        game.townGate();
-        game.crossRoad();
+        game.townGate(); // o fluxo do jogo sera controlado apartir deste ponto
+
 
 
     }
@@ -66,9 +68,6 @@ public class Game {
                 enterScanner.nextLine();
                 townGate();
             }
-            System.out.println("Guard: Hello there stranger.So your name is " + playerName + "? Sorry but we cannot enter our town.");
-            enterScanner.nextLine();
-            townGate();
         }
         if(choice==2){
             playerHp=playerHp-1;
@@ -84,6 +83,9 @@ public class Game {
             townGate();
         }
     }
+
+
+
     public void  crossRoad(){
         System.out.println("------------------------------------------------------------------------ ");
         System.out.println("You are at the crossroad.\nIf you go to south, you will go back to the town.\n");
@@ -243,7 +245,7 @@ public class Game {
             win();
         }
     }
-    public void ending{
+    public void ending(){
         System.out.println("------------------------------------------------------------------------ ");
         System.out.println("Guard: Oh you killed that goblin??? Great!");
         System.out.println("Guard: It sens you are trustwothy guy. Welcome to our town!");
